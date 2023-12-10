@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FriendlyFaceProfiles</title>
+        <link rel="stylesheet" href="styles_v_3.css">
+        <script src="pictures.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>    
+</html>
+
+<body>
+    <header>
+        <img src="friendlyface_logo.png" alt="FF Logo">
+        <a href="homepage_loged_in.html"><h1>FriendlyFace</h1></a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Our Services</a>
+                    <div class="dropdown-content">
+                        <a href="#helpers">Helpers</a>
+                        <a href="events_loged_in.html">Events</a>
+                    </div>
+                </li>
+                <li><a href="aboutus_logged_in.html">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#become_a_helper">Become a Helper</a></li>
+                <li><a href="index_v_4.html">Log out</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="searches">
+        <div class="search-container">
+
+            <div class="search">
+                <a href="#slider">           
+                    <i class="fa fa-sliders"></i>
+               </a>
+               
+               <div class="popup" id="slider">
+                   <div class="popup-content">
+                       <div class="search">
+                           <label for="categories">Search for category:</label>
+                           <select name="cat" id="cat">
+                               <option value="all">All</option>
+                               <option value="family oriented">Family Oriented</option>
+                               <option value="government">Government</option>
+                               <option value="local sites">Local Sites</option>
+                               <option value="party scene">Party Scene</option>
+                           </select>
+
+                           <br>
+               
+                           <label for="age">Search for age:</label>
+                           <input type="number" name="age" id="age"
+                           placeholder="age" 
+                           maxlength="2" 
+                           >   
+                           <br>
+                           <input type="submit" value="Search" class="btn" id="searchBtn"> 
+                           <br>
+                       </div> 
+                   </div>
+               </div>
+            </div>
+
+            <div class="search">
+                <a href="#reset" onclick="resetfilterProfile()">reset filter</a>          
+            </div>
+
+            <div class="search">
+                <a href="edit-profile.html">edit profile</a>
+            </div> 
+        </div>
+    </section>
+
+    <section id="profile">
+        <h2 style="text-align: center;">Profiles</h2>
+        <p class="category"> 
+            overview of our profiles
+        </p>
+
+        <div class="profile-container">
+            <div class="profile">
+                <div id="profilepic-container">
+                    <image id="profileImage" src="https://live.staticflickr.com/2730/4194747430_17abceea99.jpg" />
+                 </div>
+
+                <h3>Sharon Kwikiriza, 21</h3>
+                <p>
+                    Hey, if you need help with navigating the Government get in contact with me.
+                </p>
+                <br>
+
+                <div class="button-container">
+                    <button class="button button5">></button>
+                </div>
+
+                <p class="categories">
+                    Government
+                </p>
+            </div>
+
+            <div class="profile">
+                <div id="profilepic-container">
+                    <image id="profileImage" src="https://cdn5.vectorstock.com/i/1000x1000/24/99/sea-waves-circle-vector-3622499.jpg" />
+                 </div>
+
+                <h3>Anja Ott, 21</h3>
+                <p>                   
+                     Hey I am from the area and I can help you in filling out and translating any forms and documents needed and required to settle down.
+                </p>
+                <br>
+
+                <div class="button-container">
+                    <button class="button button5">></button>
+                </div>
+
+                <p class="categories">
+                    government, local sites
+                </p>
+            </div>
+
+            <div class="profile">
+                <div id="profilepic-container">
+                    <image id="profileImage" src="https://eatliver.b-cdn.net/wp-content/uploads/2019/07/bread-necklaces2.jpg" />
+                 </div>
+
+                <h3>Alyssa Smith, 20</h3>
+                <p>
+                    I can help you and your family find good places to go and see.
+                </p>
+                <br>
+
+                <div class="button-container">
+                    <button class="button button5">></button>
+                </div>
+
+                <p class="categories">
+                    family oriented
+                </p>
+            </div>
+            
+            <div class="profile">
+                <div id="profilepic-container">
+                    <image id="profileImage" src="https://www.findingtheuniverse.com/wp-content/uploads/2012/12/Freiburg252520Cathedral25255B225255D.jpg" />
+                 </div>
+
+                <h3>Nashitah Zainab, 23</h3>
+                <p>
+                    I am well connected and can help you find out about fun and interesting events in the area.
+                </p>
+                <br>
+                
+                <div class="button-container">
+                    <button class="button button5">></button>
+                </div>
+
+                <p class="categories">
+                    party scene, Local Sites
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+
+

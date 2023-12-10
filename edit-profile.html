@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FriendlyFaceProfiles</title>
+        <link rel="stylesheet" href="styles_v_3.css">
+        <script src="pictures.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>  
+    
+    <body>
+        <header>
+            <img src="friendlyface_logo.png" alt="FF Logo">
+            <a href="homepage_loged_in.html"><h1>FriendlyFace</h1></a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Our Services</a>
+                        <div class="dropdown-content">
+                            <a href="#helpers">Helpers</a>
+                            <a href="events_loged_in.html">Events</a>
+                        </div>
+                    </li>
+                    <li><a href="aboutus_logged_in.html">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#become_a_helper">Become a Helper</a></li>
+                    <li><a href="index_v_4.html">Log out</a>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="searches">
+            <div class="search-container">
+    
+                <div class="search">
+                    <a href="profile.html">           
+                        <i class="fa fa-user-circle-o" style="font-size:24px"></i>
+                   </a>
+                   
+            </div>
+        </section>
+
+        <section id="profile-edit">
+            <h2 style="text-align: center;">Profile</h2>
+
+            <div class="profile-edit-container">
+                 <div class="profile-edit">
+
+                        <image id="profileImage" src="https://icon-library.com/images/username-icon/username-icon-11.jpg" />
+
+                     <div class="input-fields">
+                        <label for="name,age">Enter name, age:</label>
+                        <input type="text" name="name,age" id="name,age" placeholder="Name, age" maxlength="50">
+                
+                        <label for="describe">How I can help:</label>
+                        <textarea  type="text" name="describe" id="describe" placeholder="Max 1.000 words" maxlength="1000" class="large-input"></textarea>
+
+                        <div class="choose-category">
+                            <label for="choose-category">Select categories:</label>
+                            <select name="choose-category" id="choose-category" multiple>
+                                <option value="family-oriented">Family Oriented</option>
+                                <option value="government">Government</option>
+                                <option value="local-sites">Local Sites</option>
+                                <option value="party-scene">Party Scene</option>
+                            </select>
+                        </div>                        
+                     </div>
+                </div>
+            </div>
+        </section>
+    
+    </body>
+</html>

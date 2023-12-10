@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendlyFace</title>
+    <link rel="stylesheet" href="styles_v_3.css">
+    <script src="pictures.js"></script>
+    <script src="events.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <img src="friendlyface_logo.png" alt="FF Logo">
+        <a href="index_v_4.html"><h1>FriendlyFace</h1></a>
+        <nav>
+            <ul>
+                <li><a href="#popup">Login/Sign Up</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Our Services</a>
+                    <div class="dropdown-content">
+                        <a href="#helper-popup">Helpers</a>
+                        <a href="events.html">Events</a>
+                    </div>
+                </li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#become_a_helper">Become a Helper</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <a href="#" class="close">&times;</a>
+            <h3>Got an account?</h3>
+            <a href="loginForm.html" class="btn">Login</a>
+            <br/><br>
+            <p>Don't have one yet?</p>
+            <a href="sign_upForm.html">Sign up</a>
+        </div>
+    </div>
+
+    <div class="helper-popup" id="helper-popup">
+        <div class="helper-popup-content">
+            <a href="#" class="close">&times;</a>
+            <h3>Login to view</h3>
+            <a href="loginForm.html" class="btn">Login</a>
+            <br/><br>
+            <p>Don't have an account?</p>
+            <a href="sign_upForm.html">Sign up</a>
+        </div>
+    </div>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+
+        <!-- Event Form: Allowing users to submit new events -->
+        <form id="eventForm">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" required>
+
+            <label for="eventDate">Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+
+            <label for="eventDescription">Description:</label>
+            <textarea id="eventDescription" name="eventDescription" required></textarea>
+
+            <button type="submit">Submit Event</button>
+        </form>
+
+        <!-- Event Listings: Displaying posted events -->
+        <div id="eventListings">
+            <!-- Dynamic content will be added here using JavaScript -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with the team <a href="contactForm.html">here</a</p>
+    
+        <address class=contact-info">
+            <p><strong>Address:</strong> Musterstraße 123, 12345 Freiburg</p>
+            <p><strong>Telephone:</strong> +49 123 456789</p>
+            <p><strong>E-Mail:</strong> info@friendlyface.de</p>
+            
+            <!-- Placeholder social media links -->
+            <div class="social-media-links">
+                <p>Catch us on social media:</p>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">X</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </address>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 FriendlyFace</p>
+    </footer>
+</body>
+</html>

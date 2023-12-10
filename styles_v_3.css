@@ -1,0 +1,769 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    background-color: #141414;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the container */
+    align-items: center; /* Center items vertically */
+}
+
+header img {
+    width: 130px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth transition for color change */
+}
+
+nav a:hover {
+    color: #0070c9; /* Change the color on hover */
+}
+
+
+/* Styles for Popup */
+.popup-one {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141414;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 300px;
+    width: 100%;
+}
+
+.popup-one:target {
+    display: block;
+}
+
+.popup-one-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Additional Styling for Login/Sign Up */
+.popup-one h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.popup-one a {
+    text-decoration: none;
+    color: #0070c9;
+}
+
+.popup-one a:hover {
+    text-decoration: underline;
+}
+
+.popup-one p {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* Styles for Popup helper */
+.helper-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141414;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 300px;
+    width: 100%;
+}
+
+.helper-popup:target {
+    display: block;
+}
+
+.helper-popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Additional Styling for Login/Sign Up */
+.helper-popup h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.helper-popup a {
+    text-decoration: none;
+    color: #0070c9;
+}
+
+.helper-popup a:hover {
+    text-decoration: underline;
+}
+
+.helper-popup p {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* Hero section styles */
+#hero {
+    position: relative;
+    background-image: url("https://victoria.mediaplanet.com/app/uploads/sites/114/2020/03/Two-people-working-on-a-tablet-together-888x500.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/62/15/29/62152936cee5a864b7601f48cf16728e.jpg');
+    background-size: contain;
+    background-position: center;
+    z-index: -1; /* Set a z-index to ensure it stays behind the content */
+  }
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: bold; /* Increase font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for contrast */
+}
+
+/* Layout grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Services section styles */
+#our-services {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    width: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.service {
+    flex: 0 0 80%; /* Setting each review to take 80% width */
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center ;
+}
+
+.helper,
+.event {
+    width: 800px; /* Adjusting the width of each box as needed */
+}
+
+.helper img,
+.event img {
+    width: 600px; /* Making the images fill the container */
+}
+
+.vl {
+    border-style: groove;
+    border-left: 3px black;
+    height: 500px;
+  }
+ 
+
+/* About section styles */
+#about {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Reviews section styles */
+#reviews {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review {
+    flex: 0 0 80%; /* Setting each review to take 80% width */
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.review h3 {
+    color: #0070c9;
+}
+
+.review p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Founder section styles */
+#founders {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.founders-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.founder{
+    flex: 0 0 80%; /* Setting each review to take 80% width */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.founder h3 {
+    color: #0070c9;
+}
+
+.founder p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Contact section styles */
+#contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #141414;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+/* Media queries */
+
+/* Layout for phones */
+@media only screen and (min-width: 320px) {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  /* Layout for tablets */
+  @media only screen and (min-width: 768px) {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  
+  /* Layout for desktops */
+  @media only screen and (min-width: 1200px) {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+  
+  /* Layout for large desktops */
+  @media only screen and (min-width: 1920px) {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+  }
+  
+
+/* Additional Styling for Login Page */
+#login {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.buton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #0070c9;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buton:hover {
+    background-color: #004a8f;
+}
+
+a {
+    color: #0070c9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Additional Styling for Events */
+#events {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#events h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Event Form Styles */
+#eventForm {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#eventForm label,
+#eventForm input,
+#eventForm textarea,
+#eventForm button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#eventForm button {
+    background-color: #0070c9;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#eventForm button:hover {
+    background-color: #004a8f;
+}
+
+/* Event Listings Styles */
+#eventListings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.event-card h3 {
+    color: #0070c9;
+    margin-bottom: 10px;
+}
+
+/* Dropdown styles */
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* profile css */
+#searches{
+    flex: 80%; /* Setting each review to take 80% width */
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px;
+    width: max-content;
+    color: black;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: auto; /* Use scroll if content overflows */
+    padding: 0 10px; /* Adjusting padding */
+    box-sizing: border-box;
+}
+
+.search {
+    flex: auto;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 5px; /* Adjusting margins */
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* Styles for Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141414;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 300px;
+    width: 100%;
+}
+
+.popup:target {
+    display: block;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content label{
+    color: white;
+}
+
+
+#profile {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile{
+    flex: 0 0 80%; /* Setting each review to take 80% width */
+    float: right;
+    box-sizing: border-box;
+    padding: 10px;
+    border-style: groove;
+    position: relative;
+}
+
+.category{
+    text-align: center;
+}
+
+.categories {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* To center horizontally within the profile div */
+    transform: translateX(-50%); /* Center the text */
+    font-size: smaller;
+}
+
+.button {
+    background-color: #f8f8f8;
+    border: none;
+    color:dimgray;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+  }
+
+.button-container{
+    float: right;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+  
+.button5 {border-radius: 50%;}
+
+#profilepic-container {
+    float:left;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profilepic-container img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+/* edit profile */
+
+#profile-edit {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.profile-edit-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-edit {
+    overflow: hidden;
+    border-style: groove;
+    padding: 20px;
+}
+
+.profile-edit img {
+    float: left;
+    margin-right: 40px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.input-fields {
+    overflow: hidden;
+}
+
+.input-fields label {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+.large-input {
+    width: 100%;
+    height: 100px; /* Adjust the width to fill the available space */
+    padding: 10px; /* Add padding for better visual appearance */
+    font-size: 16px; /* Adjust font size if needed */
+    box-sizing: border-box; /* Includes padding and border in the width */
+    resize: vertical; /* Optionally enable vertical resizing */
+}
+
+/* Styles for Offer Box and Help Box- waiting for services page! */
+.offer-box,
+.help-box {
+    background-color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.offer-box p,
+.help-box p {
+    margin: 0;
+}
+
+.offer-box a,
+.help-box a {
+    color: #0070c9;
+    text-decoration: underline;
+}
+
+

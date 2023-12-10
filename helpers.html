@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendlyFaceServices</title>
+    <link rel="stylesheet" href="styles_v_3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #3e4095;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        section h2, section h3 {
+            color: #3e4095;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        section a {
+            color: #3e4095;
+            font-weight: bold;
+        }
+
+        section a:hover {
+            text-decoration: underline;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 8px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="friendlyface_logo.png" alt="FF Logo">
+        <a href="homepage_loged_in.html"><h1>FriendlyFace</h1></a>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Our Services</a>
+                    <div class="dropdown-content">
+                        <a href="#helpers">Helpers</a>
+                        <a href="events_loged_in.html">Events</a>
+                    </div>
+                </li>
+                <li><a href="aboutus_logged_in.html">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#become_a_helper">Become a Helper</a></li>
+                <li><a href="index_v_4.html">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="helpers">
+        <h2 style="text-align: center; color: #3e4095;">Helpers</h2>
+        <p style="text-align: center; color: #555;">
+            Locals from Freiburg and other participating cities are here to help you
+            become familiar with the area, locate the places you need,
+            and navigate through common challenges that come
+            with moving. Meet our helpful community
+            <a href="profile.html" title="here" style="color: #3e4095; font-weight: bold;">here</a>.
+        </p>
+    </section>
+    
+    <section id="become-one">
+        <h3 style="text-align: center; color: #3e4095;">Become a Helper</h3>
+        <p style="text-align: center; color: #555;">
+            Do you want to lend a hand to newcomers? Are you a local looking
+            to help welcome people to the area and guide others with your
+            knowledge?
+            <br>
+            You can become a helper and sign up to join us in
+            welcoming our new neighbors!
+            We help those new to the area by offering guidance, personal
+            experience, and knowledge.
+            <br>
+            Our helpers specialize in at least one of the following topics:
+        </p>
+        <ul style="text-align: center; color: #555; font-weight: bold;">
+            <li>Bureaucratic business</li>
+            <li>Family related business</li>
+            <li>Local sites</li>
+            <li>Party scene</li>
+        </ul>
+        <a href="#become_a_helper" class="become-helper-button">Join Our Community</a>
+    </section>
+
+    <!-- For the Products Page Help Box -->
+    <script>
+        // Function to show the help box after 60 seconds
+        function showHelpBox() {
+            setTimeout(() => {
+                const helpBox = document.createElement('div');
+                helpBox.id = 'helpBox';
+                helpBox.classList.add('help-box');
+                helpBox.innerHTML = '<p>Do you need help? Please, <a href="contactForm.html">click here</a>.</p>';
+                document.body.appendChild(helpBox);
+            }, 10000); // 10 seconds
+        }
+
+        // Call the function when the page is loaded
+        window.onload = showHelpBox;
+    </script>
+
+</body>
+</html>
