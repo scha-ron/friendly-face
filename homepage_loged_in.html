@@ -6,28 +6,51 @@
     <title>FriendlyFace</title>
     <link rel="stylesheet" href="styles_v_3.css">
     <script src="pictures.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
     <header>
-        <img src="friendlyface_logo.png" alt="FF Logo">
-        <h1>FriendlyFace</h1>
-        <nav>
-            <ul>
-                <li><a href="profile.html">Profiles</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Our Services</a>
-                    <div class="dropdown-content">
-                        <a href="#helpers">Helpers</a>
-                        <a href="events_loged_in.html">Events</a>
-                    </div>
-                </li>
-                <li><a href="aboutus_logged_in.html">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#become_a_helper">Become a Helper</a></li>
-                <li><a href="index_v_4.html">Log out</a>
-                </li></ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="friendlyface_logo.png" alt="FF Logo" width="60" height="60" class="d-inline-block align-top">
+                
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profiles</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#helper">Helpers</a>
+                            <a class="dropdown-item" href="events_loged_in.html">Events</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus_logged_in.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#become_a_helper">Become a Helper</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_v_4.html">Log out</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+
     </header>
 
     <section id="hero">
