@@ -160,5 +160,29 @@
     <footer>
         <p>&copy; 2023 FriendlyFace</p>
     </footer>
+    <!-- Home Page Special Offer Script -->
+<script>
+    // Define the expiration date for the special offer (yyyy-mm-dd format)
+    const offerExpirationDate = '2024-02-01';
+
+    // Check if the current date is before the expiration date
+    const currentDate = new Date().toISOString().split('T')[0];
+    if (currentDate <= offerExpirationDate) {
+        // Show the special offer box
+        const offerBox = document.createElement('div');
+        offerBox.id = 'specialOfferBox';
+        offerBox.classList.add('offer-box');
+        offerBox.innerHTML = '<p>Special Offer: Get 25% off on Helper subscription!</p>';
+        document.body.appendChild(offerBox);
+    }
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
 </body>
 </html>
