@@ -7,27 +7,47 @@
     <link rel="stylesheet" href="styles_v_3.css">
     <script src="pictures.js"></script>
     <script src="events.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
 </head>
 <body>
 
     <header>
-        <img src="friendlyface_logo.png" alt="FF Logo">
-        <a href="index_v_4.html"><h1>FriendlyFace</h1></a>
-        <nav>
-            <ul>
-                <li><a href="#popup">Login/Sign Up</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Our Services</a>
-                    <div class="dropdown-content">
-                        <a href="#helper-popup">Helpers</a>
-                        <a href="events.html">Events</a>
-                    </div>
-                </li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#become_a_helper">Become a Helper</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="friendlyface_logo.png" alt="FF Logo" width="60" height="60" class="d-inline-block align-top">
+                
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#popup-one">Login/Sign Up</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#helper-popup">Helpers</a>
+                            <a class="dropdown-item" href="events.html">Events</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#become_a_helper">Become a Helper</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
     </header>
@@ -79,7 +99,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Get in touch with the team <a href="contactForm.html">here</a</p>
+        <p>Get in touch with the team <a href="contactForm.html">here</a></p>
     
         <address class=contact-info">
             <p><strong>Address:</strong> Musterstraße 123, 12345 Freiburg</p>
@@ -99,5 +119,10 @@
     <footer>
         <p>&copy; 2023 FriendlyFace</p>
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
