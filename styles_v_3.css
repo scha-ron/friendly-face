@@ -767,3 +767,17 @@ a:hover {
 }
 
 
+#helpers {
+    text-align: center; 
+}
+
+#become-one{
+    text-align: center;
+}
+
+.become-one li{
+    text-align: center; 
+    font-weight: bold;
+}
+
+
