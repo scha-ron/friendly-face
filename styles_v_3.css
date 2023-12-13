@@ -769,10 +769,12 @@ a:hover {
 
 #helpers {
     text-align: center; 
+    padding: 40px 20px;
 }
 
 #become-one{
     text-align: center;
+    padding: 40px 20px;
 }
 
 .become-one li{
