@@ -6,6 +6,9 @@
     <title>FriendlyFaceServices</title>
     <link rel="stylesheet" href="styles_v_3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="map.js" defer></script>
+
 </head>
 <body>
 
@@ -64,8 +67,28 @@
             with moving. Meet our helpful community
             <a href="profile.html" title="here" style="color: #3e4095; font-weight: bold;">here</a>.
         </p>
-    </section>
+
+        <h3 class="smaller-text">Our locations</h3>
+        <p>Use this map to get an overwiew of our locations and where they are located</p>
+        <ul class="dropdown">
+            <a href="#" class="dropbtn"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                Our locations</a>
+            <div class="dropdown-content">
+                <a href="#" id="freiburgLink">Freiburg im Breisgau</a>
+                <a href="#" id="furtwangenLink">Furtwangen im Schwarzwald</a>
+                <a href="#" id="titiseeLink">Titisee-Neustadt</a>
+                <a href="#" id="rustLink">Rust</a>
+                <a href="#" id="emmendingenLink">Emmendingen</a>
+            </div>
+        </ul>    
     
+        <div class="map" id="map">
+            <div class="map-container" id="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720984.8265331215!2d5.591021362439549!3d48.24105123188912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4790ec232f1791bd%3A0xdbe2bec8ae87edf1!2sBlack%20Forest!5e0!3m2!1sen!2sde!4v1702295062661!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+        </div>
+    
+    </section>
+
     <section id="become-one">
         <h3 >Become a Helper</h3>
         <p>
@@ -88,6 +111,30 @@
         </ul>
         <a href="#become_a_helper" class="become-helper-button">Join Our Community</a>
     </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with the team <a href="contactForm.html">here</a></p>
+    
+        <address class=contact-info">
+            <p><strong>Address:</strong> Musterstraße 123, 12345 Freiburg</p>
+            <p><strong>Telephone:</strong> +49 123 456789</p>
+            <p><strong>E-Mail:</strong> info@friendlyface.de</p>
+            
+            <!-- Placeholder social media links -->
+            <div class="social-media-links">
+                <p>Catch us on social media:</p>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">X</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FriendlyFace</p>
+    </footer>
+
     
 
     <!-- For the Products Page Help Box -->
