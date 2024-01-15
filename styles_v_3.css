@@ -107,7 +107,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-one {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1em;
@@ -118,7 +118,7 @@ nav a:hover {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn-one:hover {
     background-color: white;
 }
 
@@ -177,7 +177,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-two {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1em;
@@ -188,7 +188,7 @@ nav a:hover {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn-two:hover {
     background-color: white;
 }
 
