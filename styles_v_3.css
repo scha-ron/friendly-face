@@ -809,6 +809,11 @@ a:hover {
     height: 350px; 
 }
 
+.helpers_button{
+    color: #3c7fed; 
+    font-weight: bolder;
+}
+
 
 /* Dropdown styles  for locations*/
 .dropdown {
