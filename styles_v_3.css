@@ -742,6 +742,20 @@ a:hover {
     box-sizing: border-box; /* Includes padding and border in the width */
     resize: vertical; /* Optionally enable vertical resizing */
 }
+ /*button for submitting profile */
+.submit_button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.submit_button:hover {
+    background-color: #0056b3;
+  }
 
 /* Styles for Offer Box and Help Box- waiting for services page! */
 .offer-box,
@@ -795,6 +809,11 @@ a:hover {
     height: 350px; 
 }
 
+.helpers_button{
+    color: #3c7fed; 
+    font-weight: bolder;
+}
+
 
 /* Dropdown styles  for locations*/
 .dropdown {
@@ -845,3 +864,44 @@ a:hover {
 }
 
 
+#chat-container {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/*chat window*/
+#chat-messages {
+    padding: 10px;
+    overflow-y: scroll;
+    min-height: 300px;
+    max-height: 300px;
+}
+
+#user-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#send-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.send-button:hover {
+    background-color: #0056b3;
+  }
