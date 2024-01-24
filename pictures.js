@@ -57,25 +57,38 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Prevent default link behavior
         resetfilterProfile(); // reset filter
         closeSliderPopup(); // Toggle the slider visibility
+        closeUserPopup();
     });
 
+    document.getElementById('user-searchBtn').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents the form submission (if applicable)
+        UserProfiles();
+        toggleUserPopup(); // Close the user search popup after filtering
+    });
+
+    // Function to handle opening the user search popup on anchor link click
+    const userSliderLink = document.querySelector('.search a[href="#search_user"]');
+    userSliderLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        toggleUserPopup(); // Toggle the user search popup visibility
+    });
 });
 
 function filterProfiles() {
     const selectedCategory = document.getElementById('cat').value.toLowerCase();
     const selectedAge = parseInt(document.getElementById('age').value); // Get selected age as an integer
-    const profileElements = document.querySelectorAll('.profile'); // get category form profile
+    const profileElements = document.querySelectorAll('.profile');
 
     profileElements.forEach(profile => {
-        const categories = profile.querySelector('.categories').textContent.toLowerCase(); //get categories
-        const profileCategories = categories.split(',').map(category => category.trim());  //split categories by comma
+        const categories = profile.querySelector('.categories').textContent.toLowerCase(); // get categories
+        const profileCategories = categories.split(',').map(category => category.trim()); // split categories by comma
 
         const ageRegex = /\b(\d{1,2})\b/g; // Regular expression to extract age from profile text
         const ageMatch = profile.querySelector('h3').textContent.match(ageRegex); // Match age from profile
 
         const profileAge = ageMatch ? parseInt(ageMatch[0]) : null; // Get the age if available
 
-        const categoryMatch = selectedCategory === 'all' || profileCategories.includes(selectedCategory); //chack category match
+        const categoryMatch = selectedCategory === 'all' || profileCategories.includes(selectedCategory); // check category match
         const ageCondition = isNaN(selectedAge) || (profileAge !== null && profileAge === selectedAge); // Check if ages match or no specific age is selected
 
         if (categoryMatch && ageCondition) {
@@ -83,22 +96,22 @@ function filterProfiles() {
         } else {
             profile.style.display = 'none'; // Hide the profile
         }
-    }); 
+    });
 }
 
 function toggleSliderPopup() {
     const sliderPopup = document.getElementById('slider');
     if (sliderPopup.style.display === 'none' || sliderPopup.style.display === '') {
-        sliderPopup.style.display = 'block'; // Show the popup if it's closed
+        sliderPopup.style.display = 'block'; // Show the slider popup if it's closed
     } else {
-        sliderPopup.style.display = 'none'; // Hide the popup if it's open
+        sliderPopup.style.display = 'none'; // Hide the slider popup if it's open
     }
 }
 
 function resetfilterProfile() {
     const selectedCategory = "all";
-    const selectedAge = NaN; 
-    const profileElements = document.querySelectorAll('.profile'); // get category form profile
+    const selectedAge = NaN;
+    const profileElements = document.querySelectorAll('.profile'); // get category from profile
 
     const categorySelect = document.getElementById('cat');
     categorySelect.selectedIndex = 0; // Set the category dropdown to 'All'
@@ -106,16 +119,20 @@ function resetfilterProfile() {
     const ageInput = document.getElementById('age');
     ageInput.value = ''; // Clear the age input field
 
+    const userInputElement = document.getElementById('user');
+    userInputElement.value = '';      // Clear the user input field
+
+
     profileElements.forEach(profile => {
-        const categories = profile.querySelector('.categories').textContent.toLowerCase(); //get categories
-        const profileCategories = categories.split(',').map(category => category.trim());  //split categories by comma
+        const categories = profile.querySelector('.categories').textContent.toLowerCase(); // get categories
+        const profileCategories = categories.split(',').map(category => category.trim()); // split categories by comma
 
         const ageRegex = /\b(\d{1,2})\b/g; // Regular expression to extract age from profile text
         const ageMatch = profile.querySelector('h3').textContent.match(ageRegex); // Match age from profile
 
         const profileAge = ageMatch ? parseInt(ageMatch[0]) : null; // Get the age if available
 
-        const categoryMatch = selectedCategory === 'all' || profileCategories.includes(selectedCategory); //chack category match
+        const categoryMatch = selectedCategory === 'all' || profileCategories.includes(selectedCategory); // check category match
         const ageCondition = isNaN(selectedAge) || (profileAge !== null && profileAge === selectedAge); // Check if ages match or no specific age is selected
 
         if (categoryMatch && ageCondition) {
@@ -123,13 +140,55 @@ function resetfilterProfile() {
         } else {
             profile.style.display = 'none'; // Hide the profile
         }
-    }); 
+    });
 }
 
 function closeSliderPopup() {
-    sliderPopup.style.display = 'none'; 
+    const sliderPopup = document.getElementById('slider');
+    sliderPopup.style.display = 'none';
 }
 
+function UserProfiles() {
+    const selectedUser = document.getElementById('user').value.toLowerCase(); // Get selected user as a lowercase string
+    const profileElements = document.querySelectorAll('.profile');
+
+    profileElements.forEach(profile => {
+        const profileNameElement = profile.querySelector('h3');
+        const profileNameText = profileNameElement.innerText;
+        const profileName = profileNameText.split(',')[0].trim().toLowerCase(); // Extract and convert to lowercase
+
+        const userMatch = selectedUser === 'all' || profileName.includes(selectedUser.toLowerCase()); // Check for a partial name match
+
+        if (userMatch) {
+            profile.style.display = 'block'; // Show the profile
+        } else {
+            profile.style.display = 'none'; // Hide the profile
+        }
+    });
+
+    // Append search to search history only if it doesn't exist already
+    var selectElement = document.getElementById("s-history");
+
+    // Check if the option already exists
+    var optionExists = Array.from(selectElement.options).some(option => option.value.toLowerCase() === selectedUser);
+
+    if (!optionExists) {
+        var newOption = document.createElement("option");
+        newOption.value = selectedUser;
+        newOption.text = selectedUser;
+        selectElement.add(newOption);
+    }
+}
+
+
+function toggleUserPopup() {
+    const sliderPopup = document.getElementById('search_user');
+    if (sliderPopup.style.display === 'none' || sliderPopup.style.display === '') {
+        sliderPopup.style.display = 'block'; // Show the slider popup if it's closed
+    } else {
+        sliderPopup.style.display = 'none'; // Hide the slider popup if it's open
+    }
+}
 
 
 // multiple Select

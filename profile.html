@@ -89,6 +89,34 @@
             </div>
 
             <div class="search">
+                <a href="#search_user">
+                    <i class="fa fa-search"></i>
+                </a> 
+                
+                <div class="popup" id="search_user">
+                    <div class="search_user_popup-content">
+                        <div class="search">
+                            <label for="user">Search for Profile:</label>
+                            <input type="text" name="user" id="user"
+                            placeholder="enter user name" 
+                            >   
+                            <br><br>
+                            <input type="submit" value="Search" class="search_btn" id="user-searchBtn"> 
+                            <br>
+                        </div> 
+                        
+                    </div>
+                    <div class="searchHistory">
+                        <label for="history">Search History:</label>
+                        <select id="s-history" name="s-history">
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="search">
                 <a href="#reset" onclick="resetfilterProfile()">reset filter</a>          
             </div>
 
@@ -104,8 +132,15 @@
             Overview of our profiles
         </p>
 
-        <div class="profile-container">
+        <div class="profile-container" >
             <div class="profile">
+                <div class="pin-button pin-container">
+                    <a href="" ><button class="pin-button">
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                    </button>
+                    </a>          
+                </div>
+
                 <div id="profilepic-container">
                     <image id="profileImage" src="https://live.staticflickr.com/2730/4194747430_17abceea99.jpg" />
                  </div>
@@ -124,9 +159,17 @@
                 <p class="categories">
                     Government
                 </p>
+
             </div>
 
             <div class="profile">
+                <div class="pin-button pin-container">
+                    <a href="" ><button class="pin-button">
+                        <i class="fa fa-thumb-tack"></i>
+                    </button>
+                    </a>          
+                </div>
+
                 <div id="profilepic-container">
                     <image id="profileImage" src="https://cdn5.vectorstock.com/i/1000x1000/24/99/sea-waves-circle-vector-3622499.jpg" />
                  </div>
@@ -148,6 +191,13 @@
             </div>
 
             <div class="profile">
+                <div class="pin-button pin-container">
+                    <a href=""><button class="pin-button">
+                        <i class="fa fa-thumb-tack"></i>
+                    </button>
+                    </a>          
+                </div>
+
                 <div id="profilepic-container">
                     <image id="profileImage" src="https://eatliver.b-cdn.net/wp-content/uploads/2019/07/bread-necklaces2.jpg" />
                  </div>
@@ -169,6 +219,13 @@
             </div>
             
             <div class="profile">
+                <div class="pin-button pin-container">
+                    <a href=""><button class="pin-button">
+                        <i class="fa fa-thumb-tack"></i>
+                    </button>
+                    </a>          
+                </div>
+
                 <div id="profilepic-container">
                     <image id="profileImage" src="https://www.findingtheuniverse.com/wp-content/uploads/2012/12/Freiburg252520Cathedral25255B225255D.jpg" />
                  </div>
