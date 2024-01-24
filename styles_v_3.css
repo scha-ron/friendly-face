@@ -618,6 +618,44 @@ a:hover {
     color: white;
 }
 
+/* Styles for user search Popup */
+.search_user_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141414;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 300px;
+    width: 100%;
+}
+
+.search_user_popup:target {
+    display: block;
+}
+
+.search_user_popup-content {
+    text-align: center;
+}
+
+.search_user_popup-content label{
+    color: white;
+}
+
+.searchHistory{
+    text-align: center;
+}
+
+.searchHistory label{
+    color: #f1f1f1;
+    font-size: small;
+}
+
+
 
 #profile {
     padding: 40px 20px;
@@ -670,8 +708,37 @@ a:hover {
 .button:hover {
     background-color: lightgray;
 }
+
+.pin-button{
+    background-color: #f8f8f8;
+    border: none;
+    color:dimgray;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: auto;
+    margin: 1px 2px;
+}
+
+.pin-button:hover {
+    background-color: lightgray;
+}
+
+.pin-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
   
 .button5 {border-radius: 50%;}
+
+.pin-button {border-radius: 50%;}
+
+.pin-container {
+    float: left;
+}
+
 
 #profilepic-container {
     float:left;
